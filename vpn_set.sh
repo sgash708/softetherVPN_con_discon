@@ -3,7 +3,7 @@
 VPNPATH=/usr/local/vpnclient
 VPNCLIENT=${VPNPATH}/vpnclient
 VPNCMD=${VPNPATH}/vpncmd
-SERVER="`route -n get sample-dns.softether.net:443 | grep 'route to:' | awk '{print $3}'`"
+SERVER="`route -n get sample-dns.softether.net | grep 'route to:' | awk '{print $3}'`"
 NEW_DEFROUTE="192.168.3.1"
 NET_MASK="255.255.255.255"
 VPNNAME="AC_SAMPLE"
