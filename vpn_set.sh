@@ -4,7 +4,9 @@ VPNPATH=/usr/local/vpnclient
 VPNCLIENT=${VPNPATH}/vpnclient
 VPNCMD=${VPNPATH}/vpncmd
 SERVER="`route -n get sample-dns.softether.net | grep 'route to:' | awk '{print $3}'`"
-NEW_DEFROUTE="192.168.3.1"
+# 自宅のゲートウェイに合わせて変更
+# e.g.) 192.168.3.1
+NEW_DEFROUTE="192.168.0.1"
 NET_MASK="255.255.255.255"
 VPNNAME="AC_SAMPLE"
 VPNUP=`ps -ef | grep vpnclient | grep -v grep | wc -l`
